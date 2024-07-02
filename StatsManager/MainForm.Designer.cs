@@ -68,6 +68,7 @@
             btnOpenTerminals.TabIndex = 4;
             btnOpenTerminals.Text = "Открыть все терминалы";
             btnOpenTerminals.UseVisualStyleBackColor = false;
+            btnOpenTerminals.Click += btnOpenTerminals_Click;
             // 
             // btnCloseTerminals
             // 
@@ -162,6 +163,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = " Профиль [Elyor Latipov - dotnet_uz]";
             FormClosing += MainForm_FormClosing;
+            Load += MainForm_Load;
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
