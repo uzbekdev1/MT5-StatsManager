@@ -38,6 +38,8 @@
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
+            comboBox1 = new ComboBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
@@ -61,7 +63,7 @@
             btnOpenTerminals.BackColor = Color.FromArgb(68, 179, 68);
             btnOpenTerminals.FlatStyle = FlatStyle.Flat;
             btnOpenTerminals.ForeColor = Color.White;
-            btnOpenTerminals.Location = new Point(18, 139);
+            btnOpenTerminals.Location = new Point(18, 205);
             btnOpenTerminals.Margin = new Padding(4);
             btnOpenTerminals.Name = "btnOpenTerminals";
             btnOpenTerminals.Size = new Size(196, 32);
@@ -75,7 +77,7 @@
             btnCloseTerminals.BackColor = Color.Red;
             btnCloseTerminals.FlatStyle = FlatStyle.Flat;
             btnCloseTerminals.ForeColor = Color.White;
-            btnCloseTerminals.Location = new Point(469, 139);
+            btnCloseTerminals.Location = new Point(241, 205);
             btnCloseTerminals.Margin = new Padding(4);
             btnCloseTerminals.Name = "btnCloseTerminals";
             btnCloseTerminals.Size = new Size(196, 32);
@@ -87,9 +89,9 @@
             // 
             groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             groupBox1.Controls.Add(dataGridView1);
-            groupBox1.Location = new Point(15, 178);
+            groupBox1.Location = new Point(15, 244);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(653, 271);
+            groupBox1.Size = new Size(653, 205);
             groupBox1.TabIndex = 6;
             groupBox1.TabStop = false;
             groupBox1.Text = "Торговые счета";
@@ -117,7 +119,7 @@
             dataGridView1.ShowCellToolTips = false;
             dataGridView1.ShowEditingIcon = false;
             dataGridView1.ShowRowErrors = false;
-            dataGridView1.Size = new Size(647, 243);
+            dataGridView1.Size = new Size(647, 177);
             dataGridView1.TabIndex = 4;
             // 
             // Column4
@@ -146,11 +148,32 @@
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
             // 
+            // comboBox1
+            // 
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Crash1000", "Crash500", "Crash300", "Boom1000", "Boom500", "Boom300" });
+            comboBox1.Location = new Point(160, 150);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(277, 29);
+            comboBox1.TabIndex = 7;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Location = new Point(18, 150);
+            label1.Name = "label1";
+            label1.Size = new Size(136, 21);
+            label1.TabIndex = 8;
+            label1.Text = "Список индексов:";
+            // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(9F, 21F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(684, 461);
+            Controls.Add(label1);
+            Controls.Add(comboBox1);
             Controls.Add(groupBox1);
             Controls.Add(btnCloseTerminals);
             Controls.Add(btnOpenTerminals);
@@ -168,6 +191,7 @@
             groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -181,5 +205,7 @@
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
+        private ComboBox comboBox1;
+        private Label label1;
     }
 }
